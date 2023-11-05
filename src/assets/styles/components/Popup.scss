@@ -1,0 +1,51 @@
+.popup {
+  background-color: #fff;
+  position: absolute;
+  right: 100%;
+  top: 50%;
+  transform: translateY(-50%);
+  margin-right: 5px;
+  width: 120px;
+  height: 40px;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  z-index: 1;
+
+  .logout {
+    font-size: 20px;
+    width: 90%;
+    text-align: center;
+    cursor: pointer;
+
+    &:hover {
+      text-decoration: underline;
+      font-weight: 600;
+    }
+  }
+
+  .cancel-icon {
+    font-size: 1.5rem;
+    color: rgb(91, 90, 90);
+    transition: all 0.2s ease-in-out;
+    cursor: pointer;
+
+    &:hover {
+      color: black;
+    }
+  }
+
+  @media (min-width: 1920px) {
+    width: 200px;
+    height: 60px;
+    border-radius: 10px;
+
+    .logout {
+      font-size: 30px;
+    }
+
+    .cancel-icon {
+      font-size: 2.5rem;
+    }
+  }
+}

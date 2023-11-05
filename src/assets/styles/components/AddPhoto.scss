@@ -1,0 +1,78 @@
+.add-photo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  width: 100%;
+
+  .add-photo-title {
+    margin-bottom: 25px;
+    font-size: 26px;
+    font-weight: 400;
+  }
+
+  .file-input-wrapper,
+  .file-input-wrapper-error {
+    background-color: #e6ebff;
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    transition: all 0.2s ease-in-out;
+
+    &:hover {
+      background-color: #dfe5fe;
+    }
+
+    #input-file {
+      display: none;
+    }
+
+    .input-label {
+      width: 100%;
+      height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      .avatar {
+        width: 100%;
+        height: 100%;
+        border-radius: 50%;
+        object-fit: cover;
+      }
+
+      .add-photo-icon {
+        width: 60px;
+      }
+    }
+  }
+
+  .file-input-wrapper-error {
+    background-color: #fe7676;
+  }
+
+  .error-msg {
+    position: absolute;
+    top: 100%;
+    margin-top: 10px;
+    font-size: 16px;
+    color: red;
+  }
+
+  @media (min-width: 1920px) {
+    .add-photo-title {
+      margin-bottom: 45px;
+      font-size: 36px;
+    }
+
+    .file-input-wrapper,
+    .file-input-wrapper-error {
+      width: 200px;
+      height: 200px;
+    }
+
+    .error-msg {
+      font-size: 23px;
+    }
+  }
+}
