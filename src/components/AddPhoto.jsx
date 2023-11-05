@@ -1,4 +1,4 @@
-import React, { useContext } from "react";
+import { useContext } from "react";
 import addPhotoIcon from "../assets/images/addPhoto-icon.png";
 import { PhotoContext } from "../context/features/photo";
 

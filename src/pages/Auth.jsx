@@ -1,4 +1,4 @@
-import React, { useContext, useEffect, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import AddPhoto from "../components/AddPhoto";
 import { PhotoContext } from "../context/features/photo";
 import { AuthContext } from "../context/features/auth";

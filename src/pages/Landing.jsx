@@ -1,4 +1,4 @@
-import React, { useContext } from "react";
+import { useContext } from "react";
 import landingIcon from "../assets/images/landing-icon.png";
 import { useNavigate } from "react-router-dom";
 import { AuthContext } from "../context/features/auth";

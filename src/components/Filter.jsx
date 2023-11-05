@@ -1,4 +1,4 @@
-import React, { useContext, useEffect, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import { DataContext } from "../context/features/data";
 
 const Filter = () => {
@@ -34,7 +34,7 @@ const Filter = () => {
 
   useEffect(() => {
     handleFilter(statusFilters, sexFilters);
-  }, [statusFilters, sexFilters]);
+  }, [statusFilters, sexFilters, handleFilter]);
 
   return (
     <div className="filter-wrapper">
