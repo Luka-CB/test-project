@@ -52,22 +52,20 @@ const DataProvider = ({ children }) => {
         (student) =>
           student.status === statusFilters[0] && student.sex === sexFilters[0]
       );
-      setCurrentPage(0);
     } else if (sexFilters.length === 1) {
       filteredData = students.filter((student) =>
         sexFilters.some((s) => s === student.sex)
       );
-      setCurrentPage(0);
     } else if (statusFilters.length === 1) {
       filteredData = students.filter((student) =>
         statusFilters.some((f) => f === student.status)
       );
-      setCurrentPage(0);
     } else {
       filteredData = students;
     }
 
     setFilteredStudentsData(filteredData);
+    setCurrentPage(0);
   }, []);
 
   const clearFilter = () => {

@@ -10,6 +10,8 @@
     justify-content: center;
     position: relative;
 
+    @import "./Filter";
+
     .content {
       width: 900px;
 
@@ -88,12 +90,16 @@
         background-color: #fff;
         border-radius: 10px;
         overflow-x: scroll;
+
+        @import "./Table";
       }
 
       .row3 {
         display: flex;
         justify-content: center;
         margin-top: 39px;
+
+        @import "./TablePagination";
       }
     }
   }

@@ -1,5 +1,5 @@
 import { useContext } from "react";
-import { Link } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import { AuthContext } from "../context/features/auth";
 import { PopupContext } from "../context/features/popup";
 import Popup from "./Popup";
@@ -8,9 +8,17 @@ const Navigation = () => {
   const { user } = useContext(AuthContext);
   const { isPopupActive, togglePopup } = useContext(PopupContext);
 
+  const { pathname } = useLocation();
+  const navigate = useNavigate();
+
   return (
     <nav className="navigation">
       <div className="col1">
+        {pathname === "/api" ? (
+          <i className="material-icons back-icon" onClick={() => navigate(-1)}>
+            keyboard_backspace
+          </i>
+        ) : null}
         <h2 className="nav-title">Form</h2>
       </div>
       <div className="col2">

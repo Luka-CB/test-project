@@ -1,0 +1,177 @@
+.pagination-table {
+  display: flex;
+  align-items: center;
+
+  .first {
+    margin-top: 3px;
+
+    .first-icon,
+    .first-icon-disabled {
+      color: #fff;
+      font-size: 20px;
+      transition: all 0.1s ease-in-out;
+      cursor: pointer;
+
+      &:hover {
+        color: #dadada;
+      }
+    }
+
+    .first-icon-disabled {
+      color: rgba(253, 250, 250, 0.412);
+      cursor: default;
+
+      &:hover {
+        color: rgba(253, 250, 250, 0.412);
+      }
+    }
+  }
+
+  .prev {
+    margin-top: 3px;
+
+    .prev-icon,
+    .prev-icon-disabled {
+      color: #fff;
+      font-size: 20px;
+      margin-right: 5px;
+      transition: all 0.1s ease-in-out;
+      cursor: pointer;
+
+      &:hover {
+        color: #dadada;
+      }
+    }
+
+    .prev-icon-disabled {
+      color: rgba(253, 250, 250, 0.412);
+      cursor: default;
+
+      &:hover {
+        color: rgba(253, 250, 250, 0.412);
+      }
+    }
+  }
+
+  .nums {
+    display: flex;
+    align-items: center;
+
+    .page-num {
+      color: #fff;
+      font-size: 18px;
+      font-family: "Courier New", Courier, monospace;
+      font-weight: bold;
+    }
+
+    .of {
+      color: #b6b4b4;
+      font-size: 14px;
+      margin: 0 10px;
+      font-style: italic;
+    }
+
+    .total-page-num {
+      color: #fff;
+      font-size: 17px;
+      font-family: "Courier New", Courier, monospace;
+    }
+  }
+
+  .last {
+    margin-top: 3px;
+
+    .last-icon,
+    .last-icon-disabled {
+      color: #fff;
+      font-size: 20px;
+      transition: all 0.1s ease-in-out;
+      cursor: pointer;
+
+      &:hover {
+        color: #dadada;
+      }
+    }
+
+    .last-icon-disabled {
+      color: rgba(253, 250, 250, 0.412);
+      cursor: default;
+
+      &:hover {
+        color: rgba(253, 250, 250, 0.412);
+      }
+    }
+  }
+
+  .next {
+    margin-top: 3px;
+
+    .next-icon,
+    .next-icon-disabled {
+      color: #fff;
+      font-size: 20px;
+      margin-left: 5px;
+      transition: all 0.1s ease-in-out;
+      cursor: pointer;
+
+      &:hover {
+        color: #dadada;
+      }
+    }
+
+    .next-icon-disabled {
+      color: rgba(253, 250, 250, 0.412);
+      cursor: default;
+
+      &:hover {
+        color: rgba(253, 250, 250, 0.412);
+      }
+    }
+  }
+
+  @media (min-width: 1920px) {
+    .first {
+      .first-icon,
+      .first-icon-disabled {
+        font-size: 36px;
+      }
+    }
+
+    .prev {
+      .prev-icon,
+      .prev-icon-disabled {
+        font-size: 30px;
+        margin-right: 15px;
+      }
+    }
+
+    .nums {
+      .page-num {
+        font-size: 27px;
+      }
+
+      .of {
+        font-size: 20px;
+      }
+
+      .total-page-num {
+        font-size: 26px;
+      }
+    }
+
+    .last {
+      .last-icon,
+      .last-icon-disabled {
+        font-size: 36px;
+      }
+    }
+
+    .next {
+      .next-icon,
+      .next-icon-disabled {
+        font-size: 30px;
+        margin-left: 15px;
+      }
+    }
+  }
+}

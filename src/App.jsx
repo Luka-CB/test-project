@@ -6,6 +6,7 @@ import FormPage from "./pages/FormPage";
 import { useContext } from "react";
 import { PopupContext } from "./context/features/popup";
 import { AuthContext } from "./context/features/auth";
+import ApiPage from "./pages/ApiPage";
 
 const App = () => {
   const { isOverlayActive, togglePopup } = useContext(PopupContext);
@@ -27,6 +28,14 @@ const App = () => {
           element={
             <ProtectedRoute>
               <FormPage />
+            </ProtectedRoute>
+          }
+        />
+        <Route
+          path="/api"
+          element={
+            <ProtectedRoute>
+              <ApiPage />
             </ProtectedRoute>
           }
         />

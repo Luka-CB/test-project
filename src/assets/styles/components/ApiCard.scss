@@ -1,0 +1,115 @@
+.card {
+  background-color: #fff;
+  width: 350px;
+  height: 200px;
+  border-radius: 10px;
+  border: 1px solid #fafafa;
+  box-shadow: 0px 4px 4px 0px rgba(221, 221, 221, 0.25);
+
+  .header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 40px;
+    padding: 0 10px;
+    border-bottom: 1px solid #535353;
+
+    .card-id {
+      display: flex;
+      align-items: center;
+
+      span {
+        font-size: 12px;
+      }
+
+      #id {
+        font-family: "Courier New", Courier, monospace;
+        margin-left: 5px;
+        font-size: 15px;
+        font-weight: 700;
+      }
+    }
+
+    .title {
+      font-size: 18px;
+      font-weight: 600;
+    }
+  }
+
+  .body {
+    padding: 10px;
+    height: 120px;
+
+    .body-text {
+      font-size: small;
+    }
+  }
+
+  .footer {
+    border-top: 1px solid #535353;
+    height: 40px;
+
+    .user-id {
+      display: flex;
+      align-items: center;
+      height: 100%;
+      padding: 0 10px;
+
+      span {
+        font-size: 12px;
+      }
+
+      #id {
+        font-family: "Courier New", Courier, monospace;
+        margin-left: 5px;
+        font-size: 15px;
+        font-weight: 700;
+      }
+    }
+  }
+
+  @media (min-width: 1920px) {
+    width: 550px;
+    height: 250px;
+
+    .header {
+      height: 50px;
+
+      .card-id {
+        span {
+          font-size: 18px;
+        }
+
+        #id {
+          font-size: 26px;
+        }
+      }
+
+      .title {
+        font-size: 29px;
+      }
+    }
+
+    .body {
+      height: 140px;
+
+      .body-text {
+        font-size: large;
+      }
+    }
+
+    .footer {
+      height: 60px;
+
+      .user-id {
+        span {
+          font-size: 18px;
+        }
+
+        #id {
+          font-size: 26px;
+        }
+      }
+    }
+  }
+}

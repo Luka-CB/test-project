@@ -1,7 +1,7 @@
 import { useContext } from "react";
 import { DataContext } from "../context/features/data";
 
-const PaginationTable = () => {
+const TablePagination = () => {
   const { totalPages, currentPage, handlePaginate } = useContext(DataContext);
 
   return (
@@ -73,4 +73,4 @@ const PaginationTable = () => {
   );
 };
 
-export default PaginationTable;
+export default TablePagination;

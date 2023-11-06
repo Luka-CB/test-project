@@ -7,6 +7,21 @@
   border-bottom: 1px solid #ebebeb;
 
   .col1 {
+    display: flex;
+    align-items: center;
+
+    .back-icon {
+      color: #fff;
+      margin-left: 20px;
+      font-size: 3.5rem;
+      cursor: pointer;
+      transition: all 0.2s ease-in-out;
+
+      &:hover {
+        color: #ffffffd8;
+      }
+    }
+
     .nav-title {
       color: #fff;
       font-size: 20px;

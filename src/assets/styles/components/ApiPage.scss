@@ -1,0 +1,51 @@
+.api-container {
+  .cards-wrapper {
+    width: 100%;
+    min-height: 70vh;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 2em 0.5em;
+    justify-items: center;
+    margin: 50px 0;
+    position: relative;
+
+    .spinner {
+      width: 90px;
+      height: 90px;
+      border-radius: 50%;
+      border: 1px solid #737373;
+      border-top: 1px solid #fff;
+      border-bottom: 1px solid #fff;
+      animation: spin 500ms linear infinite;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+
+    @import "./ApiCard";
+
+    @keyframes spin {
+      0% {
+        transform: rotate(0);
+      }
+      100% {
+        transform: rotate(360deg);
+      }
+    }
+  }
+
+  .api-pagination {
+    margin: 50px 0;
+    display: flex;
+    justify-content: center;
+
+    @import "./ApiPagination";
+  }
+
+  @media (min-width: 1920px) {
+    .cards-wrapper {
+      grid-template-columns: repeat(auto-fit, minmax(550px, 1fr));
+    }
+  }
+}
