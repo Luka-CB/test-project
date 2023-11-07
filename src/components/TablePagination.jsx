@@ -5,8 +5,8 @@ const TablePagination = () => {
   const { totalPages, currentPage, handlePaginate } = useContext(DataContext);
 
   return (
-    <div className="pagination-table">
-      <div className="first" onClick={() => handlePaginate(0)}>
+    <main className="table-pagination">
+      <section className="first" onClick={() => handlePaginate(0)}>
         <i
           className={
             currentPage === 0
@@ -16,8 +16,8 @@ const TablePagination = () => {
         >
           keyboard_double_arrow_left
         </i>
-      </div>
-      <div
+      </section>
+      <section
         className="prev"
         onClick={() => currentPage !== 0 && handlePaginate(currentPage - 1)}
       >
@@ -30,8 +30,8 @@ const TablePagination = () => {
         >
           chevron_left
         </i>
-      </div>
-      <div className="nums">
+      </section>
+      <section className="nums">
         {[...Array(totalPages)].map((page, i) => (
           <span
             className={currentPage === i ? "num-active" : "num"}
@@ -41,8 +41,8 @@ const TablePagination = () => {
             {i + 1}
           </span>
         ))}
-      </div>
-      <div
+      </section>
+      <section
         className="next"
         onClick={() =>
           currentPage !== totalPages - 1 && handlePaginate(currentPage + 1)
@@ -57,8 +57,8 @@ const TablePagination = () => {
         >
           chevron_right
         </i>
-      </div>
-      <div className="last" onClick={() => handlePaginate(totalPages - 1)}>
+      </section>
+      <section className="last" onClick={() => handlePaginate(totalPages - 1)}>
         <i
           className={
             currentPage === totalPages - 1
@@ -68,8 +68,8 @@ const TablePagination = () => {
         >
           keyboard_double_arrow_right
         </i>
-      </div>
-    </div>
+      </section>
+    </main>
   );
 };
 

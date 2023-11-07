@@ -3,6 +3,7 @@ import AddPhoto from "../components/AddPhoto";
 import { PhotoContext } from "../context/features/photo";
 import { AuthContext } from "../context/features/auth";
 import { useNavigate } from "react-router-dom";
+import Head from "../components/Head";
 
 const Auth = () => {
   const [username, setUsername] = useState("");
@@ -33,7 +34,11 @@ const Auth = () => {
   };
 
   return (
-    <div className="auth-container">
+    <main className="auth-container">
+      <Head
+        title="Authenticate"
+        description="repudiandae veniam quaerat sunt sed alias aut fugiat sit autem sed est voluptatem omnis possimus esse voluptatibus quis est aut tenetur dolor neque"
+      />
       <div className="auth-form-wrapper">
         <h1 className="form-title">Get Started</h1>
         <AddPhoto />
@@ -54,7 +59,7 @@ const Auth = () => {
           </button>
         </form>
       </div>
-    </div>
+    </main>
   );
 };
 

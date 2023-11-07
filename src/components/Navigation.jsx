@@ -13,15 +13,18 @@ const Navigation = () => {
 
   return (
     <nav className="navigation">
-      <div className="col1">
+      <section className="col1">
         {pathname === "/api" ? (
-          <i className="material-icons back-icon" onClick={() => navigate(-1)}>
+          <i
+            className="material-icons back-icon"
+            onClick={() => navigate("/form")}
+          >
             keyboard_backspace
           </i>
         ) : null}
         <h2 className="nav-title">Form</h2>
-      </div>
-      <div className="col2">
+      </section>
+      <section className="col2">
         <Link to={"/api"} className="link">
           API
         </Link>
@@ -38,7 +41,7 @@ const Navigation = () => {
             {isPopupActive ? <Popup /> : null}
           </div>
         </div>
-      </div>
+      </section>
     </nav>
   );
 };

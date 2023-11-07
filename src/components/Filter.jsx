@@ -37,8 +37,8 @@ const Filter = () => {
   }, [statusFilters, sexFilters, handleFilter]);
 
   return (
-    <div className="filter-wrapper">
-      <div className="status-filter-wrapper">
+    <main className="filter-wrapper">
+      <section className="status-filter-wrapper">
         <div
           className="status-filter"
           onClick={() => setIsStatusFilterOpen(!isStatusFilterOpen)}
@@ -70,8 +70,8 @@ const Filter = () => {
             </div>
           </div>
         ) : null}
-      </div>
-      <div className="sex-filter-wrapper">
+      </section>
+      <section className="sex-filter-wrapper">
         <div
           className="sex-filter"
           onClick={() => setIsSexFilterOpen(!isSexFilterOpen)}
@@ -103,8 +103,8 @@ const Filter = () => {
             </div>
           </div>
         ) : null}
-      </div>
-    </div>
+      </section>
+    </main>
   );
 };
 

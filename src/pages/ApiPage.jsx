@@ -4,6 +4,7 @@ import { ApiContext } from "../context/features/api";
 import ApiCard from "../components/ApiCard";
 import ApiPagination from "../components/ApiPagination";
 import { useSearchParams } from "react-router-dom";
+import Head from "../components/Head";
 
 const ApiPage = () => {
   const { fetchPosts, posts, isLoading } = useContext(ApiContext);
@@ -21,18 +22,26 @@ const ApiPage = () => {
   }, [fetchPosts, page]);
 
   return (
-    <div className="api-container">
+    <main className="api-container">
+      <Head
+        title="api"
+        description="repudiandae veniam quaerat sunt sed alias aut fugiat sit autem sed est voluptatem omnis possimus esse voluptatibus quis est aut tenetur dolor neque"
+      />
       <Navigation />
-      <div className="cards-wrapper">
-        {isLoading ? <div className="spinner"></div> : null}
+      <section className="cards-wrapper">
+        {isLoading ? (
+          <div className="spinner-wrapper">
+            <div className="spinner"></div>
+          </div>
+        ) : null}
         {posts?.map((post) => (
           <ApiCard key={post.id} post={post} />
         ))}
-      </div>
-      <div className="api-pagination">
+      </section>
+      <section className="api-pagination">
         <ApiPagination />
-      </div>
-    </div>
+      </section>
+    </main>
   );
 };
 

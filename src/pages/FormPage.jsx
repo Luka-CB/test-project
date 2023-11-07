@@ -4,6 +4,7 @@ import Navigation from "../components/Navigation";
 import Table from "../components/Table";
 import TablePagination from "../components/TablePagination";
 import { DataContext } from "../context/features/data";
+import Head from "../components/Head";
 
 const FormPage = () => {
   const { clearFilter } = useContext(DataContext);
@@ -16,12 +17,16 @@ const FormPage = () => {
   };
 
   return (
-    <div className="form-page-container">
+    <main className="form-page-container">
+      <Head
+        title="form"
+        description="repudiandae veniam quaerat sunt sed alias aut fugiat sit autem sed est voluptatem omnis possimus esse voluptatibus quis est aut tenetur dolor neque"
+      />
       <Navigation />
       <div className="content-wrapper">
         {toggleFilter ? <Filter /> : null}
         <div className="content">
-          <div className="row1">
+          <section className="row1">
             <button className="filter-btn" onClick={handleToggleFilter}>
               <i className="material-icons filter-icon">filter_alt</i>
               <span>filter</span>
@@ -32,16 +37,16 @@ const FormPage = () => {
               </div>
               <input type="text" />
             </div>
-          </div>
-          <div className="row2">
+          </section>
+          <section className="row2">
             <Table />
-          </div>
-          <div className="row3">
+          </section>
+          <section className="row3">
             <TablePagination />
-          </div>
+          </section>
         </div>
       </div>
-    </div>
+    </main>
   );
 };
 

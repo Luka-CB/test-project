@@ -18,7 +18,7 @@ const ApiPagination = () => {
   }, [page]);
 
   const perPage = 12;
-  const lastPage = 9;
+  const lastPage = Math.ceil(100 / perPage);
 
   const handleLastPage = () => {
     if (currentPage === lastPage) return;
@@ -77,8 +77,8 @@ const ApiPagination = () => {
   };
 
   return (
-    <div className="pagination-table">
-      <div className="first" onClick={handleFirstPage}>
+    <main className="pagination-table">
+      <section className="first" onClick={handleFirstPage}>
         <i
           className={
             currentPage === 1
@@ -88,8 +88,8 @@ const ApiPagination = () => {
         >
           keyboard_double_arrow_left
         </i>
-      </div>
-      <div className="prev" onClick={handlePrevPage}>
+      </section>
+      <section className="prev" onClick={handlePrevPage}>
         <i
           className={
             currentPage === 1
@@ -99,13 +99,13 @@ const ApiPagination = () => {
         >
           chevron_left
         </i>
-      </div>
-      <div className="nums">
+      </section>
+      <section className="nums">
         <span className="page-num">{currentPage}</span>
         <span className="of">of</span>
         <span className="total-page-num">{lastPage}</span>
-      </div>
-      <div className="next" onClick={handleNextPage}>
+      </section>
+      <section className="next" onClick={handleNextPage}>
         <i
           className={
             currentPage === lastPage
@@ -115,8 +115,8 @@ const ApiPagination = () => {
         >
           chevron_right
         </i>
-      </div>
-      <div className="last" onClick={handleLastPage}>
+      </section>
+      <section className="last" onClick={handleLastPage}>
         <i
           className={
             currentPage === lastPage
@@ -126,8 +126,8 @@ const ApiPagination = () => {
         >
           keyboard_double_arrow_right
         </i>
-      </div>
-    </div>
+      </section>
+    </main>
   );
 };
 

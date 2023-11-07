@@ -1,7 +1,7 @@
 const ApiCard = ({ post }) => {
   return (
-    <div className="card">
-      <div className="header">
+    <main className="card">
+      <section className="header">
         <h2
           className="title"
           title={post.title?.length >= 25 ? post.title : undefined}
@@ -14,17 +14,17 @@ const ApiCard = ({ post }) => {
           <span>Card ID:</span>
           <h3 id="id">{post.id}</h3>
         </div>
-      </div>
-      <div className="body">
+      </section>
+      <section className="body">
         <p className="body-text">{post.body}</p>
-      </div>
-      <div className="footer">
+      </section>
+      <section className="footer">
         <div className="user-id">
           <span>User ID:</span>
           <h3 id="id">{post.userId}</h3>
         </div>
-      </div>
-    </div>
+      </section>
+    </main>
   );
 };
 
