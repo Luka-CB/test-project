@@ -40,7 +40,8 @@
             color: #767777;
             position: absolute;
             left: 5%;
-            font-size: 20px;
+            width: 20px;
+            height: 20px;
           }
 
           span {
@@ -67,7 +68,8 @@
             justify-content: center;
 
             .search-icon {
-              font-size: 20px;
+              width: 18px;
+              height: 18px;
               color: #767777;
             }
           }
@@ -119,7 +121,8 @@
             height: 42px;
 
             .filter-icon {
-              font-size: 30px;
+              width: 26px;
+              height: 26px;
             }
 
             span {
@@ -133,7 +136,8 @@
 
             .search-icon-wrapper {
               .search-icon {
-                font-size: 36px;
+                width: 26px;
+                height: 26px;
               }
             }
 

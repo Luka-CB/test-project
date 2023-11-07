@@ -5,6 +5,7 @@ import Table from "../components/Table";
 import TablePagination from "../components/TablePagination";
 import { DataContext } from "../context/features/data";
 import Head from "../components/Head";
+import { FilterIcon, SearchIcon } from "../components/svgs";
 
 const FormPage = () => {
   const { clearFilter } = useContext(DataContext);
@@ -28,12 +29,12 @@ const FormPage = () => {
         <div className="content">
           <section className="row1">
             <button className="filter-btn" onClick={handleToggleFilter}>
-              <i className="material-icons filter-icon">filter_alt</i>
+              <FilterIcon />
               <span>filter</span>
             </button>
             <div className="search-box">
               <div className="search-icon-wrapper">
-                <i className="material-icons search-icon">search</i>
+                <SearchIcon />
               </div>
               <input type="text" />
             </div>
