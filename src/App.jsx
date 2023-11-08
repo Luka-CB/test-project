@@ -7,6 +7,7 @@ import { useContext } from "react";
 import { PopupContext } from "./context/features/popup";
 import { AuthContext } from "./context/features/auth";
 import ApiPage from "./pages/ApiPage";
+import NotFound from "./pages/NotFound";
 
 const App = () => {
   const { isOverlayActive, togglePopup } = useContext(PopupContext);
@@ -39,6 +40,7 @@ const App = () => {
             </ProtectedRoute>
           }
         />
+        <Route path="*" element={<NotFound />} />
       </Routes>
     </div>
   );
